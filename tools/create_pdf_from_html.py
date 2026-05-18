@@ -18,6 +18,7 @@ class CreatePdfFromHtmlTool(Tool):
             css_styles = tool_parameters.get("css_styles", "").strip()
             template_data_str = tool_parameters.get("template_data", "").strip()
             filename = tool_parameters.get("filename", "").strip()
+            cloud_storage = tool_parameters.get("cloud_storage", 1)
             
             # Validate required parameters
             if not html_body:
@@ -55,6 +56,13 @@ class CreatePdfFromHtmlTool(Tool):
                 if not filename.endswith('.pdf'):
                     filename += '.pdf'
                 params["filename"] = filename
+            
+            # Normalize cloud_storage to 0 or 1 (default 1) and forward to the API
+            try:
+                cloud_storage_int = int(cloud_storage)
+            except (TypeError, ValueError):
+                cloud_storage_int = 1
+            params["cloud_storage"] = 0 if cloud_storage_int == 0 else 1
             
             # Build request body
             request_body = {

@@ -76,6 +76,7 @@ Optional parameters:
 - `css_styles`: CSS styles to apply to the PDF
 - `template_data`: JSON data for Jinja2 template variables
 - `filename`: Custom filename for the generated PDF
+- `cloud_storage`: Upload the generated PDF to APITemplate.io's storage CDN. Defaults to `1` (enabled). Set to `0` if you have configured a Post Action to upload the PDF to your own S3.
 
 Example:
 ```

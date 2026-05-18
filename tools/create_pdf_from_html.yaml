@@ -90,6 +90,25 @@ parameters:
     llm_description: "Optional custom filename for the PDF. If not provided, a UUID will be used. Must end with '.pdf'. Example: 'report_123.pdf'"
     form: llm
 
+  - name: cloud_storage
+    type: number
+    required: false
+    default: 1
+    label:
+      en_US: "Cloud Storage"
+      ja_JP: "クラウドストレージ"
+      zh_Hans: "云存储"
+      pt_BR: "Armazenamento em Nuvem"
+      zh_Hant: "雲端儲存"
+    human_description:
+      en_US: "Upload the generated PDF to APITemplate.io storage CDN. Default is 1 (enabled). Set to 0 if you have configured Post Action to upload the PDF to your own S3."
+      ja_JP: "生成されたPDFをAPITemplate.ioストレージCDNにアップロードします。デフォルトは1（有効）。Post Actionで独自のS3にアップロードするよう設定している場合は0に設定してください。"
+      zh_Hans: "将生成的PDF上传到APITemplate.io存储CDN。默认值为1（启用）。如果您已配置Post Action将PDF上传到自己的S3，请设置为0。"
+      pt_BR: "Faz upload do PDF gerado para o CDN de armazenamento do APITemplate.io. O padrão é 1 (ativado). Defina como 0 se você configurou a Post Action para enviar o PDF para seu próprio S3."
+      zh_Hant: "將生成的PDF上傳到APITemplate.io儲存CDN。預設值為1（啟用）。如果您已設定Post Action將PDF上傳到自己的S3，請設定為0。"
+    llm_description: "Whether to upload the generated PDF to APITemplate.io's storage CDN. Use 1 to enable (default) or 0 to disable (when using a custom Post Action to upload to your own S3)."
+    form: form
+
 extra:
   python:
     source: tools/create_pdf_from_html.py 
