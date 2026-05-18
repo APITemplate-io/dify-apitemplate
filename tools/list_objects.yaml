@@ -1,6 +1,6 @@
 identity:
   name: list_objects
-  author: langgenius
+  author: bktan
   label:
     en_US: "List Objects"
     ja_JP: "オブジェクトをリスト"

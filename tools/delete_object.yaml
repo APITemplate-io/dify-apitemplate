@@ -1,6 +1,6 @@
 identity:
   name: delete_object
-  author: langgenius
+  author: bktan
   label:
     en_US: "Delete Object"
     ja_JP: "オブジェクトを削除"

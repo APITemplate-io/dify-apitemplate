@@ -2,6 +2,14 @@
 
 This plugin integrates APITemplate.io's document and image generation capabilities with Dify, allowing you to create professional PDFs, images, and documents from templates or HTML content directly from your Dify applications.
 
+> **Fork notice**
+>
+> This is an unofficial fork maintained by **bktan** (`bktan/apitemplate` v1.0.0).
+> It is based on the official **`langgenius/apitemplate`** plugin (v0.0.4) from
+> [langgenius/dify-official-plugins](https://github.com/langgenius/dify-official-plugins).
+> All credit for the original implementation goes to the LangGenius team; this
+> fork exists only to allow independent versioning and packaging.
+
 ## Features
 
 - **Create PDF from Template**: Generate PDFs using pre-designed templates with custom data

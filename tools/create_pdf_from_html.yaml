@@ -1,6 +1,6 @@
 identity:
   name: create_pdf_from_html
-  author: langgenius
+  author: bktan
   label:
     en_US: "Create PDF from HTML"
     ja_JP: "HTMLからPDFを作成"

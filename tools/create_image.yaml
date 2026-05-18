@@ -1,6 +1,6 @@
 identity:
   name: create_image
-  author: langgenius
+  author: bktan
   label:
     en_US: "Create Image from Template"
     ja_JP: "テンプレートから画像を作成"

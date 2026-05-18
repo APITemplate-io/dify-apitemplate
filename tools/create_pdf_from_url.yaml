@@ -1,6 +1,6 @@
 identity:
   name: create_pdf_from_url
-  author: langgenius
+  author: bktan
   label:
     en_US: "Create PDF from URL"
     ja_JP: "URLからPDFを作成"

@@ -1,6 +1,6 @@
 identity:
   name: create_pdf
-  author: langgenius
+  author: bktan
   label:
     en_US: "Create PDF from Template"
     ja_JP: "テンプレートからPDFを作成"

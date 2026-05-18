@@ -1,6 +1,6 @@
-version: 0.0.4
+version: 1.0.0
 type: plugin
-author: langgenius
+author: bktan
 name: apitemplate
 label:
   en_US: APITemplate.io
