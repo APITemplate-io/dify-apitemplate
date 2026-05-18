@@ -104,25 +104,12 @@ class CreatePdfFromHtmlTool(Tool):
                 yield self.create_text_message(f"PDF generation failed: {error_msg}")
                 return
             
-            # Extract information
-            download_url = result.get("download_url", "")
-            total_pages = result.get("total_pages", 0)
-            transaction_ref = result.get("transaction_ref", "")
-            
-            # Create success response
-            summary = f"PDF generated successfully from HTML! {total_pages} pages created."
+            summary = f"PDF generated successfully from HTML! {result.get('total_pages', 0)} pages created."
             if filename:
                 summary += f" Filename: {filename}"
             
             yield self.create_text_message(summary)
-            yield self.create_json_message({
-                "status": "success",
-                "download_url": download_url,
-                "total_pages": total_pages,
-                "transaction_ref": transaction_ref,
-                "filename": filename if filename else f"{transaction_ref}.pdf",
-                "source": "html"
-            })
+            yield self.create_json_message(result)
             
         except requests.exceptions.RequestException as e:
             yield self.create_text_message(f"Network error: {str(e)}")
